@@ -7,7 +7,7 @@ from flask import Flask
 from flask import request
 from flask import render_template
 
-data="/Users/huyduc/Documents/flask_calender/sources/allevents_4.json"
+data="/sources/allevents_4.json"
 #filename="/Users/huyduc/Downloads/dhvi_calendar_code/batch_data.json"
 with open(data, 'r', encoding='utf-8') as json_file:
     data = json.load(json_file)
