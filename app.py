@@ -5,9 +5,10 @@ import json
 from flask import jsonify
 from flask import Flask
 from flask import request
-from flask import render_template
+import os.path
 
-data="/sources/allevents_4.json"
+my_path = os.path.abspath(os.path.dirname(__file__))
+data = os.path.join(my_path, "./sources/allevents_4.json")
 #filename="/Users/huyduc/Downloads/dhvi_calendar_code/batch_data.json"
 with open(data, 'r', encoding='utf-8') as json_file:
     data = json.load(json_file)
