@@ -1,11 +1,15 @@
 import json
-
 #import streamlit as st
 #from streamlit_calendar import calendar
-from flask import Flask, render_template, jsonify
+#from flask import Flask, render_template, jsonify
+import os.path
+from flask import jsonify
+from flask import Flask
+from flask import request
+from flask import render_template
 
-data="/Users/huyduc/Downloads/dhvi_calendar_code/dash-full-calendar/assets/allevents_4.json"
-#filename="/Users/huyduc/Downloads/dhvi_calendar_code/batch_data.json"
+my_path = os.path.abspath(os.path.dirname(__file__))
+data = os.path.join(my_path, "./sources/allevents_4.json")
 with open(data, 'r', encoding='utf-8') as json_file:
     data = json.load(json_file)
 app = Flask(__name__)
