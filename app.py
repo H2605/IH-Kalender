@@ -20,7 +20,7 @@ events = data#[
 
 @app.route('/')
 def index():
-    return render_template('calendar.html')
+    return render_template('kalendar.html')
                            #/Users/huyduc/Downloads/dhvi_calendar_code/dash-full-calendar/assets/kalender.html')
 
 @app.route('/events')
