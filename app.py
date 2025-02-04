@@ -11,9 +11,10 @@ from flask import render_template
 my_path = os.path.abspath(os.path.dirname(__file__))
 #app = Flask(__name__, template_folder='template')
 data = os.path.join(my_path, "./sources/allevents_4.json")
+app = Flask(__name__)
+
 with open(data, 'r', encoding='utf-8') as json_file:
     data = json.load(json_file)
-app = Flask(__name__,template_folder='templates')
 events = data#[
 #    {"title": "Meeting", "start": "2025-02-05"},
 #    {"title": "Geburtstag", "start": "2025-02-12"},
@@ -21,7 +22,7 @@ events = data#[
 
 @app.route('/')
 def index():
-    return render_template('kalendar.html')
+    return render_template('templates/kalendar.html')
                            #/Users/huyduc/Downloads/dhvi_calendar_code/dash-full-calendar/assets/kalender.html')
 
 @app.route('/events')
