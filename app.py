@@ -1,7 +1,7 @@
 import json
 
-import streamlit as st
-from streamlit_calendar import calendar
+#import streamlit as st
+#from streamlit_calendar import calendar
 from flask import Flask, render_template, jsonify
 
 data="/Users/huyduc/Downloads/dhvi_calendar_code/dash-full-calendar/assets/allevents_4.json"
