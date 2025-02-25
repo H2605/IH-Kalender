@@ -9,7 +9,7 @@ from flask import render_template
 import os.path
 
 my_path = os.path.abspath(os.path.dirname(__file__))
-data = os.path.join(my_path, "./sources/events_all7.json")
+data = os.path.join(my_path, "./sources/events_all8.json")
 
 #data="../sources/allevents_4.json"
 #filename="/Users/huyduc/Downloads/dhvi_calendar_code/batch_data.json"
